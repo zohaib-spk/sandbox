@@ -1,29 +1,28 @@
 "use strict";
 
-function userFunction(name, email) {
-  this.name = name;
-  this.email = email;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function log(strategy) {
+  strategy.handle();
 }
 
-userFunction.prototype.changeEmail = function (newEmail) {
-  this.email = newEmail;
-};
+log(new (
+/*#__PURE__*/
+function () {
+  function _class() {
+    _classCallCheck(this, _class);
+  }
 
-var newUser = new userFunction('zohaib', 'akram');
-console.dir(newUser); // class User {
-//     constructor(name, email) {
-//         this.name = name;
-//         this.email = email;
-//     }
-//
-//     static register(...args) {
-//         return new User(...args);
-//     }
-//
-//     changeEmail(newEmail) {
-//         this.email = newEmail;
-//     }
-// }
-//
-// const user = User.register('zohaib Akram', 'zohaib.akram3536@gmail.com');
-// console.dir(user);
+  _createClass(_class, [{
+    key: "handle",
+    value: function handle() {
+      console.log('my name is zohaib');
+    }
+  }]);
+
+  return _class;
+}())());
