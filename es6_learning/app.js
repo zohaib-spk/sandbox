@@ -1,37 +1,34 @@
-class Rectangle {
-    constructor(height, width) {
-        this.name = 'Rectangle';
-        this.height = height;
-        this.width = width;
-    }
+// list matching
+var [a, , b] = [1, 2, 3];
+a === 1;
+b === 3;
 
-    sayName() {
-        console.log('Hi, I am a ', this.name + '.');
-    }
+// object matching
+var {op: a, lhs: {op: b}, rhs: c}
+    = getASTNode()
 
-    get area() {
-        return this.height * this.width;
-    }
+// object matching shorthand
+// binds `op`, `lhs` and `rhs` in scope
+var {op, lhs, rhs} = getASTNode()
 
-    set area(value) {
-        this._area = value;
-    }
+// Can be used in parameter position
+function g({name: x}) {
+    console.log(x);
 }
 
-class Square extends Rectangle {
-    constructor(length) {
-        super();
-        // Here, it calls the parent class's constructor with lengths
-        // provided for the Rectangle's width and height
+g({name: 5})
 
+// Fail-soft destructuring
+var [a] = [];
+a === undefined;
 
-        // Note: In derived classes, super() must be called before you
-        // can use 'this'. Leaving this out will cause a reference error.
-        this.name = 'Square';
-        this.length=length;
-    }
+// Fail-soft destructuring with defaults
+var [a = 1] = [];
+a === 1;
+
+// Destructuring + defaults arguments
+function r({x, y, w = 10, h = 10}) {
+    return x + y + w + h;
 }
 
-var user = new Square(23);
-console.log(user.length);
-console.log(user.name);
+r({x: 1, y: 2}) === 23
