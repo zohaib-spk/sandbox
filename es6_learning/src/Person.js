@@ -1,6 +1,20 @@
-function sumNumbers(value,...numbers) {
-    return numbers.reduce((prev, current) => prev + current)+value;
+function getPerson() {
+    let name = 'zohaib Akram';
+    let age = 24;
+    return {
+        name, age, great() {
+            return `hello, ${this.name}`;
+        }
+    }
 }
 
-let numbers = [1, 2, 3];
-console.log(sumNumbers(4, ...numbers));
+let person = {
+    name: 'zohaib Akram',
+    age: 24,
+};
+
+let {name, age} = person;
+
+console.log(name);
+
+console.log(getPerson().great());
