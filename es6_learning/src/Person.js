@@ -1,20 +1,30 @@
-function getPerson() {
-    let name = 'zohaib Akram';
-    let age = 24;
-    return {
-        name, age, great() {
-            return `hello, ${this.name}`;
-        }
+// function userFunction(name, email) {
+//     this.name = name;
+//     this.email = email;
+// }
+//
+// userFunction.prototype.changeEmail = function (newEmail) {
+//     this.email = newEmail;
+// };
+//
+// var newUser=new userFunction('zohaib','akram');
+// console.dir(newUser);
+
+
+class User {
+    constructor(name, email) {
+        this.name = name;
+        this.email = email;
+    }
+
+    static register(...args) {
+        return new User(...args);
+    }
+
+    changeEmail(newEmail) {
+        this.email = newEmail;
     }
 }
 
-let person = {
-    name: 'zohaib Akram',
-    age: 24,
-};
-
-let {name, age} = person;
-
-console.log(name);
-
-console.log(getPerson().great());
+const user = User.register('zohaib Akram', 'zohaib.akram3536@gmail.com');
+console.dir(user);
