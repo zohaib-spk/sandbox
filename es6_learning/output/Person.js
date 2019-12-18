@@ -2,6 +2,6 @@
 
 var text = "Red Rose";
 
-if (text.includes("Red")) {
+if (text.endsWith("Rose")) {
   console.log("this text contains Red");
 }

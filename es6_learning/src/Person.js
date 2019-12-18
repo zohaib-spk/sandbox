@@ -1,4 +1,4 @@
 let text = "Red Rose";
-if (text.startsWith("Red")) {
-    console.log("this text contains Red");
+if (text.endsWith("Rose")) {
+    console.log("this text contains the given string");
 }
