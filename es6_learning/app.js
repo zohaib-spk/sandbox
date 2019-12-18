@@ -1,10 +1,24 @@
-function* range(start, end) {
-    while (start <= end) {
-        yield start;
-        start++;
-    }
-}
+let items = new Set(['one', 'two', 'three']);
+console.log(items);  // [one,two,three]
 
-let iterator = range(1, 5);
-console.log(...[...range(1, 5)]);
-for (let i of iterator) console.log(i);
+
+items.add('three');
+console.log(items);  // [one,two,three]
+
+
+items.add('four');
+console.log(items);  // [one,two,three,four]
+
+items.delete('four');
+console.log(items);  // [one,two,three]
+
+console.log(items.size);//3
+
+
+console.log('items has 4?',items.has('four'));
+
+items.forEach((item) => console.log(item));
+
+items.clear();
+console.log(items);
+
