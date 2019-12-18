@@ -1,4 +1,6 @@
 function sumNumbers(...numbers) {
     return numbers.reduce((prev, current) => prev + current);
 }
-console.log(sumNumbers(1, 2, 3));
+
+let numbers = [1, 2, 3, 4, 5, 6];
+console.log(sumNumbers(...numbers));

@@ -10,4 +10,5 @@ function sumNumbers() {
   });
 }
 
-console.log(sumNumbers(1, 2, 3));
+var numbers = [1, 2, 3, 4, 5, 6];
+console.log(sumNumbers.apply(void 0, numbers));
