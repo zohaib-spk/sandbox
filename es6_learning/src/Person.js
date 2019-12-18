@@ -1,11 +1,11 @@
-class Person{
-    constructor(name){
-        this.name=name;
+function fire(bool) {
+    if (bool) {
+        var foo = "bar";
+        // let foo = "bar"; block level
+        console.log(foo);
     }
-
-    greet(){
-        return this.name + 'say hello!';
+    else {
+        console.log(foo);
     }
 }
-
-console.log(new Person('Zohiab Akram').greet());
+fire(false);
