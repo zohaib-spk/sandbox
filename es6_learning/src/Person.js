@@ -1,9 +1,4 @@
-function defaultDiscount() {
-    return .10;
+function sumNumbers(...numbers) {
+    return numbers.reduce((prev, current) => prev + current);
 }
-
-function applyDiscount(cost, discount = defaultDiscount()) {
-    return cost - (cost * discount);
-}
-
-alert(applyDiscount(100));
+console.log(sumNumbers(1, 2, 3));

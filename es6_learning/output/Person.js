@@ -1,12 +1,13 @@
 "use strict";
 
-function defaultDiscount() {
-  return .10;
+function sumNumbers() {
+  for (var _len = arguments.length, numbers = new Array(_len), _key = 0; _key < _len; _key++) {
+    numbers[_key] = arguments[_key];
+  }
+
+  return numbers.reduce(function (prev, current) {
+    return prev + current;
+  });
 }
 
-function applyDiscount(cost) {
-  var discount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaultDiscount();
-  return cost - cost * discount;
-}
-
-alert(applyDiscount(100));
+console.log(sumNumbers(1, 2, 3));
