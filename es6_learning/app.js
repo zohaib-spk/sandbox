@@ -1,12 +1,10 @@
-function* numbers() {
-    console.log('begin');
-    yield 1;
-    yield 2;
-    yield 3;
+function* range(start, end) {
+    while (start <= end) {
+        yield start;
+        start++;
+    }
 }
 
-var iterator = numbers();
-console.log(iterator.next().value);
-console.log(iterator.next().value);
-console.log(iterator.next().value);
-console.log(iterator.next().value);
+let iterator = range(1, 5);
+console.log(...[...range(1, 5)]);
+for (let i of iterator) console.log(i);
