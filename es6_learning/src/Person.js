@@ -1,5 +1,11 @@
 class Person{
     constructor(name){
-        this.name=namae;
+        this.name=name;
+    }
+
+    greet(){
+        return this.name + 'say hello!';
     }
 }
+
+console.log(new Person('Zohiab Akram').greet());
