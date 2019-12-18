@@ -1,4 +1,3 @@
-let text = "Red Rose";
-if (text.endsWith("Rose")) {
-    console.log("this text contains the given string");
-}
+let name = "Zoahib";
+console.log(name.repeat(10));
+[1,2,3,4,5].includes(2);
