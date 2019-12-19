@@ -1,4 +1,7 @@
 <h2>
     Welcome {{name}}
 </h2>
-<h4 [style.color]="hasError ? 'red':'blue'">ngStyle</h4>
+
+<input type="text" #input [value]="name">
+<br>
+<button (click)="logValue(input.value)">Get Input Value</button>

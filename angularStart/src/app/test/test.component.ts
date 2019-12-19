@@ -6,7 +6,6 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-    public hasError = true;
     public name = 'Zohaib Akram';
 
 
@@ -14,6 +13,10 @@ export class TestComponent implements OnInit {
     }
 
     ngOnInit() {
+    }
+
+    logValue(value) {
+        console.log(value);
     }
 
 }
