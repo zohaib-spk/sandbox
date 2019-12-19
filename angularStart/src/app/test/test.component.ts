@@ -6,14 +6,9 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-    public disable = true;
+    public hasError = true;
     public name = 'Zohaib Akram';
 
-    public fontClasses = {
-        'text-danger': false,
-        'text-success': true,
-        'text-bold': true,
-    };
 
     constructor() {
     }
