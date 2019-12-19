@@ -8,16 +8,14 @@ import {EmployeeService} from '../employee.service';
 })
 export class EmployeeDetailsComponent implements OnInit {
     public employee = [];
+    public errorMsg = '';
 
     constructor(private _employeeService: EmployeeService) {
     }
 
     ngOnInit() {
-        this._employeeService.getEmployeesData().subscribe(data => {
-            this.employee = data;
-            console.log(this.employee,'asdsad');
-        });
-
+        this._employeeService.getEmployeesData().subscribe(data => this.employee = data, error => this.errorMsg = error
+        );
     }
 
 }
