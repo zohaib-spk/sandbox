@@ -1,1 +1,6 @@
-<p>test works!</p>
+<h2>
+    Welcome {{name}}
+</h2>
+<input type="text"  [value]="name">
+<input value="{{name}}" [disabled]="disable" type="text"> <br>
+<button (click)="disable=!disable">Toggle Disable</button>
