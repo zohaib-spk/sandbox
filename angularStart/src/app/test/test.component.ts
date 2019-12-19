@@ -7,7 +7,13 @@ import {Component, OnInit} from '@angular/core';
 })
 export class TestComponent implements OnInit {
     public disable = true;
-    public name = "Zohaib Akram";
+    public name = 'Zohaib Akram';
+
+    public fontClasses = {
+        'text-danger': false,
+        'text-success': true,
+        'text-bold': true,
+    };
 
     constructor() {
     }

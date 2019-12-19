@@ -4,3 +4,7 @@
 <input type="text"  [value]="name">
 <input value="{{name}}" [disabled]="disable" type="text"> <br>
 <button (click)="disable=!disable">Toggle Disable</button>
+
+<h2 class="text-success">{{name}}</h2>
+<h2 [class.text-danger]="true">{{name}}</h2>
+<h2 [ngClass]="fontClasses">{{name}}</h2>
