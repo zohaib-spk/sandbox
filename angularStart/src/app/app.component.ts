@@ -7,6 +7,4 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
     title = 'angularStart';
-    public name = 'AppMakers';
-    public message = " ";
 }
