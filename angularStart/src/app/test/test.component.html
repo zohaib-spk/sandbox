@@ -1,6 +1,6 @@
 <h2>
     Welcome {{name}}
 </h2>
-
-<input type="text" [(ngModel)]="name" [value]="name">
-<br>
+<div *ngIf="show;then thenBlock;else elseBlock"></div>
+<ng-template #thenBlock><h4>Then Template</h4></ng-template>
+<ng-template #elseBlock><h4>Else template</h4></ng-template>

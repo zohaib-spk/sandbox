@@ -6,17 +6,13 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-    public name = 'Zohaib Akram';
+    public show = false;
 
 
     constructor() {
     }
 
     ngOnInit() {
-    }
-
-    logValue(value) {
-        console.log(value);
     }
 
 }
