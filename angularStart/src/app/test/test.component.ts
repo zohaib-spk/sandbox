@@ -6,7 +6,8 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-    public show = false;
+    public color = 'red';
+    public name = 'Zohaib Akram';
 
 
     constructor() {

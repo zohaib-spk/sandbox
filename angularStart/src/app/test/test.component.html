@@ -1,6 +1,9 @@
 <h2>
     Welcome {{name}}
 </h2>
-<div *ngIf="show;then thenBlock;else elseBlock"></div>
-<ng-template #thenBlock><h4>Then Template</h4></ng-template>
-<ng-template #elseBlock><h4>Else template</h4></ng-template>
+<div [ngSwitch]="color">
+        <div *ngSwitchCase="'red'">Red</div>
+        <div *ngSwitchCase="'blue'">Red</div>
+        <div *ngSwitchCase="'green'">Red</div>
+        <div *ngSwitchDefault>Red</div>
+</div>
