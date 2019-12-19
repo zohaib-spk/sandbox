@@ -2,6 +2,5 @@
     Welcome {{name}}
 </h2>
 
-<input type="text" #input [value]="name">
+<input type="text" [(ngModel)]="name" [value]="name">
 <br>
-<button (click)="logValue(input.value)">Get Input Value</button>
