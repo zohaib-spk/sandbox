@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
     selector: 'app-test',
@@ -6,7 +6,8 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-    public colors = ['red', 'green', 'blue'];
+    @Input('parentData') public getParentData;
+    @Output() public childEvent = new EventEmitter();
     public name = 'Zohaib Akram';
 
 
@@ -14,6 +15,10 @@ export class TestComponent implements OnInit {
     }
 
     ngOnInit() {
+    }
+
+    sendDataToParent() {
+        this.childEvent.emit('Kamran Shahid');
     }
 
 }
