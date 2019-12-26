@@ -1,14 +1,14 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {IEmploye} from './employee';
-import {Observable,  throwError} from 'rxjs';
+import {Observable, throwError} from 'rxjs';
 import {catchError} from 'rxjs/operators';
 
 @Injectable({
     providedIn: 'root'
 })
 export class EmployeeService {
-    private dataUrl = './asses/employee.json';
+    private dataUrl = './assets/employee.json';
 
     constructor(private http: HttpClient) {
     }
@@ -21,16 +21,15 @@ export class EmployeeService {
     }
 
     private handleError(error: HttpErrorResponse) {
-        // console.log('testing',error.status);
-        // if (error.error instanceof ErrorEvent) {
-        //     // A client-side or network error occurred. Handle it accordingly.
-        //     console.error('An error occurred:', error.error.message);
-        // } else {
-        //     console.error(
-        //         `Backend error`);
-        // }
-        // return an observable with a user-facing error message
+        console.log('testing', error.status);
+        if (error.error instanceof ErrorEvent) {
+            // A client-side or network error occurred. Handle it accordingly.
+            console.error('An error occurred:', error.error.message);
+        } else {
+            console.error(
+                `Backend error`);
+        }
         return throwError(
             'Something bad happened; please try again later.');
-    };
+    }
 }
