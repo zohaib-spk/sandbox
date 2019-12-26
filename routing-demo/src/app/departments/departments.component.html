@@ -1,1 +1,3 @@
-<p>departments works!</p>
+<ul class="list-group">
+    <li class="list-group-item" (click)="onSelect(depart.id)" *ngFor="let depart of departments">{{depart.name}}</li>
+</ul>
